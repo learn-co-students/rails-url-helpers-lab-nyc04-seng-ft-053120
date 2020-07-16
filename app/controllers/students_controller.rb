@@ -6,11 +6,20 @@ class StudentsController < ApplicationController
   end
 
   def show
+    # byebug
+  end
+
+  def activate
+    # byebug
+    @student = set_student
+    @student.update(active: !@student.active?)
+    redirect_to(@student)
   end
 
   private
 
     def set_student
+      # byebug
       @student = Student.find(params[:id])
     end
 end
