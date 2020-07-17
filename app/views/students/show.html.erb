@@ -1,1 +1,18 @@
-<h1><%= @student.to_s %></h1>
+
+<h1> <%= @student.to_s %> </h1>
+<style>
+    .myDiv {
+        border: 5px outset blue;
+        background-color: lightblue;
+        text-align: center;
+        }
+</style> 
+
+<div class="myDiv">
+    <% if @student.active%>
+        <p>This student is currently active.</p>
+     <% else%>
+        <p>This student is currently inactive.</p>
+    <% end %>
+</div>
+
